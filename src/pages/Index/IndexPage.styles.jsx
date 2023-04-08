@@ -5,56 +5,19 @@ const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
-  max-height: 70vh;
-
-  .logo-large {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    h1 {
-      margin: 0 0;
-      font-size: 48px;
-      font-weight: 800;
-    }
-  }
-
-  section {
-    display: flex;
-    flex-direction: column;
-    margin: 12px auto;
-  }
-
-  input {
-    width: 460px;
-    height: 45px;
-    margin: 0 60px;
-    border-radius: 8px 8px 0 0;
-    border: 1px solid ${(props) => props.theme.black};
-
-    &:last-of-type {
-      border-radius: 0 0 8px 8px;
-    }
-  }
+  justify-content: center;
+  margin: 30vh auto;
+  max-height: 10vh;
 
   button {
-    width: 465px;
+    width: 460px;
     height: 45px;
-    margin: 0 auto;
+    margin: 0 20px;
     background: ${(props) => props.theme.blue};
     color: ${(props) => props.theme.white};
-    border-radius: 8px;
-  }
-
-  a {
-    color: ${(props) => props.theme.blue};
-    text-decoration: none;
-    font-weight: 800;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
 `;
 

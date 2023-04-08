@@ -1,11 +1,14 @@
+import { NavLink as Link } from "react-router-dom";
 import StyledNavigation from "./Navigation.styles";
 
 const Navigation = () => {
   return (
     <StyledNavigation>
-      <span>
-        <i className="fa-solid fa-file-lines fa-lg"></i>
-      </span>
+      <Link to="/applications">
+        <span>
+          <i className="fa-solid fa-file-lines fa-lg"></i>
+        </span>
+      </Link>
       <span>
         <i className="fa-solid fa-building fa-lg"></i>
       </span>

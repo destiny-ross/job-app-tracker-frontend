@@ -1,29 +1,19 @@
 import StyledForm from "./IndexPage.styles";
-const IndexPage = () => {
+import { useAuth0 } from "@auth0/auth0-react";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+
+const IndexPage = ({ setUser }) => {
+  const { loginWithRedirect, isAuthenticated, user } = useAuth0();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    isAuthenticated && navigate("/dashboard");
+  });
+
   return (
     <StyledForm>
-      <div className="logo-large">
-        <h1>A</h1>
-      </div>
-      <section>
-        <h1>Welcome</h1>
-        <p>Log in to track your job applications</p>
-      </section>
-      <section>
-        <input />
-        <input />
-      </section>
-      <section>
-        <a href="/forgot-password">Forgot your Password?</a>
-      </section>
-      <section>
-        <button>Submit</button>
-      </section>
-      <section>
-        <p>
-          Don't have an account? <a href="create-account">Create one now.</a>
-        </p>
-      </section>
+      <button onClick={() => loginWithRedirect()}>Log In</button>
     </StyledForm>
   );
 };

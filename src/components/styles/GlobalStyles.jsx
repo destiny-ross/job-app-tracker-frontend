@@ -4,6 +4,10 @@ import reset from "styled-reset";
 const GlobalStyles = createGlobalStyle`
 ${reset};
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:null');
+
+*, *::before, *::after {
+  box-sizing:border-box;
+}
 html {font-size: 100%;} /*16px*/
 body {
   background: white;
@@ -12,15 +16,13 @@ body {
   line-height: 1.75;
   color: #000000;
 }
-p {margin-bottom: 1rem;}
+
 h1, h2, h3, h4, h5 {
-  margin: 3rem 0 1.38rem;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 600;
   line-height: 1.3;
 }
 h1 {
-  margin-top: 0;
   font-size: 1.802rem;
 }
 h2 {font-size: 1.602rem;}

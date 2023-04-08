@@ -17,6 +17,10 @@ const StyledNavigation = styled.nav`
     align-items: center;
     justify-content: center;
   }
+
+  svg {
+    color: white;
+  }
 `;
 
 export default StyledNavigation;
